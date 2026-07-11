@@ -24,9 +24,10 @@ D:\Python\python-mcp-server>mcp dev server.py
 <img width="895" height="202" alt="image" src="https://github.com/user-attachments/assets/56a5e2fd-c252-439f-871d-bb4a1ac8c3a4" />
 
 # Run the Server
-D:\Python\python-mcp-server>python server.py
+(.venv) D:\Python\python-mcp-server>python server.py
 
-<img width="983" height="137" alt="image" src="https://github.com/user-attachments/assets/e8638af6-debb-4452-b6cb-4f99694e3e94" />
+<img width="965" height="344" alt="image" src="https://github.com/user-attachments/assets/d46b65df-0091-438a-b101-caee906cd8e2" />
+
 
 # Add the MCP to Claude - Restart Claude Desktop. It should detect all the tools automatically.
 
