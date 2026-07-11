@@ -1,6 +1,9 @@
 # Simple MCP Server running locally
 A simple Python MCP server is one of the best ways to understand the Model Context Protocol.
 
+# Prerequisite
+Python should be installaed and run in the system. Here I used Python 3.14.0 for this exercise
+
 # Project structure
 
 <img width="672" height="228" alt="image" src="https://github.com/user-attachments/assets/6c465376-43f3-4718-85d5-81aded99435e" />
