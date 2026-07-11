@@ -7,31 +7,47 @@ A simple Python MCP server is one of the best ways to understand the Model Conte
 
 # Create a virtual env
 D:\Python\python-mcp-server>mkdir python-mcp-server
+
 D:\Python\python-mcp-server>cd python-mcp-server
+
 D:\Python\python-mcp-server>.venv\Scripts\activate
+
 D:\Python\python-mcp-server>pip install requirements.txt
+
 D:\Python\python-mcp-server>pip show mcp
 
 # Open the MCP inspector (Optional)
 D:\Python\python-mcp-server>mcp --help
+
 D:\Python\python-mcp-server>mcp dev server.py
+
 <img width="895" height="202" alt="image" src="https://github.com/user-attachments/assets/56a5e2fd-c252-439f-871d-bb4a1ac8c3a4" />
 
 # Run the Server
 D:\Python\python-mcp-server>python server.py
+
 <img width="983" height="137" alt="image" src="https://github.com/user-attachments/assets/e8638af6-debb-4452-b6cb-4f99694e3e94" />
 
-# Add the MCP to Claude - Restart Claude Desktop. It should detect the three tools automatically.
+# Add the MCP to Claude - Restart Claude Desktop. It should detect all the tools automatically.
 
 {
+
   "mcpServers": {
+  
     "PythonDemoServer": {
+    
       "command": "python",
+      
       "args": [
+      
         "D:\\Python\\python-mcp-server\\server.py"
+        
       ]
+      
     }
+    
   }
+  
 }
 <img width="960" height="717" alt="image" src="https://github.com/user-attachments/assets/ee3dd569-f0da-4ff3-af8f-33c94721d437" />
 
