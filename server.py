@@ -2,15 +2,15 @@ from datetime import datetime
 from mcp.server.fastmcp import FastMCP
 
 import os
+import uvicorn
+from starlette.applications import Starlette
+from starlette.responses import PlainTextResponse
+from starlette.routing import Mount, Route
 
-# ---------------------------------------------------
-# Create MCP Server
-# ---------------------------------------------------
-mcp = FastMCP(
-    "IRS-Demo-MCP",
-    host="0.0.0.0",
-    port=int(os.environ.get("PORT", 8000)),
-)
+from datetime import datetime
+from mcp.server.fastmcp import FastMCP
+
+mcp = FastMCP("Python-Demo-MCP")
 
 # ---------------------------------------------------
 # Sample Database
@@ -264,7 +264,16 @@ def account_summary(tin: str) -> dict:
 # Main
 # ---------------------------------------------------
 
+async def health(request):
+    return PlainTextResponse("ok")
+
+app = Starlette(
+    routes=[
+        Route("/health", health),
+        Mount("/", app=mcp.streamable_http_app()),
+    ]
+)
+
 if __name__ == "__main__":
     print("PythonDemoServer started successfully.")
-    print("Listening for MCP clients over streamable-http...")
-    mcp.run(transport="streamable-http")
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
