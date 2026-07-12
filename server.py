@@ -1,11 +1,16 @@
 from datetime import datetime
 from mcp.server.fastmcp import FastMCP
 
+import os
+
 # ---------------------------------------------------
 # Create MCP Server
 # ---------------------------------------------------
-
-mcp = FastMCP("IRS-Demo-MCP")
+mcp = FastMCP(
+    "IRS-Demo-MCP",
+    host="0.0.0.0",
+    port=int(os.environ.get("PORT", 8000)),
+)
 
 # ---------------------------------------------------
 # Sample Database
