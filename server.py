@@ -266,6 +266,5 @@ def account_summary(tin: str) -> dict:
 
 if __name__ == "__main__":
     print("PythonDemoServer started successfully.")
-    # print("Waiting for an MCP client...")
-    # mcp.run()
-    mcp.run(transport="streamable-http", host="0.0.0.0", port=8000)
+    print("Listening for MCP clients over streamable-http...")
+    mcp.run(transport="streamable-http")
