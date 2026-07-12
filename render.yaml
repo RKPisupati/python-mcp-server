@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: python-mcp-server
+    env: docker
+    plan: free
+    envVars:
+      - key: MCP_API_KEY
+        generateValue: true
+    healthCheckPath: /mcp
